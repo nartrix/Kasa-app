@@ -1,8 +1,9 @@
 /* VARIABLES */
 
 $color-primary:#ff6060; 
-$font-primary: "Montserrat-Medium", Helvetica;
+$font-primary: "Montserrat", Helvetica;
 $font-size-m : 12px;
+$color-secondary :#ffffff;
 
 body {
   margin: 0;
@@ -46,6 +47,68 @@ code {
 
       &:focus, &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* HOME */
+
+.home {
+  margin: 20px;
+
+  .section-background {
+    width: 100%;
+    margin-bottom: 22px;
+      
+    .background-img {
+      background-image: url(./asset/backgroundhome.png);
+      background-size: cover;
+      border-radius: 10px;
+
+      .section-content {
+        display: flex;
+        align-items: center;
+        height: 111px;
+
+        .title {
+          color: $color-secondary;
+          font-family: $font-primary;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 100%;
+          margin-left: 16px;
+        }
+      }
+    } 
+  }
+
+  .section-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .card {
+      background-color: #ff5f5f;
+      border-radius: 10px;
+      height: 255px;
+  
+      .card-content {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        border-radius: 10px;
+        height: 255px;
+        display: flex;
+        align-items: flex-end;
+        
+
+        .title-apartment {
+          color: $color-secondary;
+          font-family: $font-primary;
+          font-size: 18px;
+          line-height: 25.7px;
+          font-weight: 500;
+          margin: 15px 20px;
+        }
       }
     }
   }
