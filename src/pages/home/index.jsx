@@ -14,6 +14,7 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="section-card">
         <Card />
       </div>

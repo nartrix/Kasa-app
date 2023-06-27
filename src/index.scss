@@ -87,7 +87,7 @@ code {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+
     .card {
       background-color: #ff5f5f;
       border-radius: 10px;
@@ -111,5 +111,39 @@ code {
         }
       }
     }
+  }
+}
+
+/* ERROR 404 */
+
+.error-404 {
+  margin: 20px;
+  text-align: center;
+
+  .error-content {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 133px;
+    margin-top: 195px;
+
+    .error-title {
+      color: $color-primary;
+      font-size: 96px;
+      font-family: $font-primary;
+      margin-bottom: 11px;
+    }
+
+    p {
+      color: $color-primary;
+      font-size: 18px;
+    }
+
+  }
+
+  .error-link {
+    color: $color-primary;
+    font-size: 14px;
+    text-decoration-line: underline;
+    text-align: center;
   }
 }
