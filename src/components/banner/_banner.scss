@@ -1,0 +1,25 @@
+.section-background {
+    margin-bottom: 22px;
+    margin: 20px;
+        
+    .background-img {
+        background-image: url(../../asset/backgroundhome.png);
+        background-size: cover;
+        border-radius: 10px;
+
+        .section-content {
+        display: flex;
+        align-items: center;
+        height: 111px;
+
+        .title {
+            color: $color-secondary;
+            font-family: $font-primary;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 100%;
+            margin-left: 16px;
+        }
+        }
+    }
+}

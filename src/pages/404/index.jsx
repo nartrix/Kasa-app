@@ -1,17 +1,7 @@
-import { Link } from "react-router-dom";
+import Error404 from "../../components/error-404";
 
 function Error() {
-  return (
-    <div className="error-404">
-      <div className="error-content">
-        <h1 className="error-title">404</h1>
-        <p>Oups! La page que vous demandez n'existe pas.</p>
-      </div>
-      <Link className="error-link" to="/">
-        Retourner sur la page d’accueil
-      </Link>
-    </div>
-  );
+  return <Error404 />;
 }
 
 export default Error;

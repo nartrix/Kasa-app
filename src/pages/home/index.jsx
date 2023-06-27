@@ -1,22 +1,28 @@
+import { useEffect, useState } from "react";
 import Card from "../../components/card";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import Banner from "../../components/banner";
 
 function Home() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get("/data.json").then((res) => setData(res.data)); //requète AXIOS ici également pour prochaine utilisation API
+  }, []);
+
   return (
     <div className="home">
-      <div className="section-background">
-        <div className="background-img">
-          <div className="section-content">
-            <h1 className="title">
-              Chez vous,
-              <br />
-              partout et ailleurs
-            </h1>
-          </div>
-        </div>
-      </div>
+      <Banner />
 
       <div className="section-card">
-        <Card />
+        {data.map((appart, id) => (
+          <div className="cards" key={id}>
+            <Link className="link-card" to={`/logement/${appart.id}`}>
+              <Card cover={appart.cover} title={appart.title} />
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

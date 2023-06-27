@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+  
+    .LOGO {
+      height: 47px;
+      width: 145px;
+    }
+  
+    .nav {
+      display: flex;
+      gap: 10px;
+  
+      .nav-link {
+        color: $color-primary;
+        font-family: $font-primary;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 17.1px;
+        text-decoration: none;
+  
+        &:focus, &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
