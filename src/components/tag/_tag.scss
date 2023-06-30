@@ -1,0 +1,14 @@
+.tag {
+    background: $color-primary;
+    color: $color-secondary;
+    font-family: $font-primary;
+    font-weight: 500;
+    width: 84px;
+    height: 18px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
