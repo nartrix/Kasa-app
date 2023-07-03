@@ -1,0 +1,24 @@
+.apartment-host {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .host-name {
+        color: $color-primary;
+        width: 63px;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .host-picture {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        img {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+}

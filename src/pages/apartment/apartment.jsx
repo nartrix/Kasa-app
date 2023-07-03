@@ -5,6 +5,7 @@ import Carrousel from "../../components/carrousel";
 import Tag from "../../components/tag";
 import Collapse from "../../components/collapse/";
 import Stars from "../../components/stars";
+import ApartmentHost from "../../components/apartment-host";
 
 function Apartment() {
   const params = useParams();
@@ -30,26 +31,33 @@ function Apartment() {
       </li>
     ));
 
-  const styleHostTag = {
+  const styleApartmentTag = {
     display: "flex",
     gap: "10px",
     margin: "10px 20px",
   };
 
-  const styleHostInfos = {
+  const styleApartmentInfos = {
     margin: "0px 20px",
   };
 
-  const styleHostTitle = {
+  const styleApartmentTitle = {
     color: "#ff6060",
     fontSize: "18px",
     margin: "0px",
   };
 
-  const styleHostLocation = {
+  const styleApartmentLocation = {
     color: "#ff6060",
     fontSize: "14px",
     margin: "0px",
+  };
+
+  const styleInfoHost = {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    margin: "20px",
   };
 
   return (
@@ -58,18 +66,22 @@ function Apartment() {
         <Carrousel slides={getPictures} />
         <div className="apartment-container">
           <div className="apartment-content">
-            <div className="apartment-infos" style={styleHostInfos}>
-              <h1 style={styleHostTitle}>{getApartment.title}</h1>
-              <h3 style={styleHostLocation}>{getApartment.location}</h3>
+            <div className="apartment-infos" style={styleApartmentInfos}>
+              <h1 style={styleApartmentTitle}>{getApartment.title}</h1>
+              <h3 style={styleApartmentLocation}>{getApartment.location}</h3>
             </div>
-            <div className="apartment-tags" style={styleHostTag}>
+            <div className="apartment-tags" style={styleApartmentTag}>
               {tags.map((tag) => (
                 <Tag key={tag} tag={tag} />
               ))}
             </div>
           </div>
-          <div className="apartment-host">
+          <div className="apartment-infoHost" style={styleInfoHost}>
             <Stars rate={getApartment.rating} />
+            <ApartmentHost
+              hostTitle={getApartment.host.name}
+              hostPicture={getApartment.host.picture}
+            />
           </div>
         </div>
         <div className="apartment-description">
