@@ -1,0 +1,13 @@
+.stars {
+    display: flex;
+    justify-content: space-between;
+    width: 98px;
+    height: 18px;
+    margin-top: 24px;
+
+    .star {
+        width: 15px;
+        height: 15px;
+        fill: $color-primary;
+    }
+}
