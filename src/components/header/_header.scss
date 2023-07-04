@@ -4,23 +4,37 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      margin: 40px 100px 0px;
+    }
   
-    .LOGO {
+    img {
       height: 47px;
       width: 145px;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        width: 210px;
+        height: 68px;
+      }
     }
   
     .nav {
       display: flex;
       gap: 10px;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        gap: 47px;
+      }
   
       .nav-link {
         color: $color-primary;
-        font-family: $font-primary;
         font-size: 12px;
-        font-weight: 500;
-        line-height: 17.1px;
         text-decoration: none;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+          font-size: 24px;
+        }
   
         &:focus, &:hover {
           text-decoration: underline;
