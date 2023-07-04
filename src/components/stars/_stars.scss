@@ -1,12 +1,24 @@
 .stars {
     display: flex;
     justify-content: space-between;
+    gap: 5px;
     width: 98px;
     height: 18px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        gap: 10px;
+        width: 196px;
+        height: 36px;
+    }
 
     .star {
         width: 15px;
         height: 15px;
         fill: $color-primary;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

@@ -1,11 +1,9 @@
 .tag {
     background: $color-primary;
     color: $color-secondary;
-    font-family: $font-primary;
-    font-weight: 500;
     width: 84px;
     height: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     font-size: 10px;
     display: flex;
@@ -14,4 +12,9 @@
     white-space: nowrap;
     overflow: hidden;
     padding: 2px 29px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: 25px;
+        font-size: 14px;
+    }
 }

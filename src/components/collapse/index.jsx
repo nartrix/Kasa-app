@@ -9,7 +9,7 @@ function Collapse(props) {
   };
 
   return (
-    <div className="collapse">
+    <div id="collapse">
       <div onClick={toggle} className="collapse-content">
         <h2>{props.aboutTitle}</h2>
         <img

@@ -31,52 +31,23 @@ function Apartment() {
       </li>
     ));
 
-  const styleApartmentTag = {
-    display: "flex",
-    gap: "10px",
-    margin: "10px 20px",
-  };
-
-  const styleApartmentInfos = {
-    margin: "0px 20px",
-  };
-
-  const styleApartmentTitle = {
-    color: "#ff6060",
-    fontSize: "18px",
-    margin: "0px",
-  };
-
-  const styleApartmentLocation = {
-    color: "#ff6060",
-    fontSize: "14px",
-    margin: "0px",
-  };
-
-  const styleInfoHost = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    margin: "20px",
-  };
-
   return (
     getApartment && (
       <div key={params.id} className="apartment">
         <Carrousel slides={getPictures} />
-        <div className="apartment-container">
-          <div className="apartment-content">
-            <div className="apartment-infos" style={styleApartmentInfos}>
-              <h1 style={styleApartmentTitle}>{getApartment.title}</h1>
-              <h3 style={styleApartmentLocation}>{getApartment.location}</h3>
+        <div className="apartment-content">
+          <div className="apartment-infos">
+            <div className="apartment-titleLocation">
+              <h1>{getApartment.title}</h1>
+              <h3>{getApartment.location}</h3>
             </div>
-            <div className="apartment-tags" style={styleApartmentTag}>
+            <div className="apartment-tags">
               {tags.map((tag) => (
                 <Tag key={tag} tag={tag} />
               ))}
             </div>
           </div>
-          <div className="apartment-infoHost" style={styleInfoHost}>
+          <div className="apartment-infosHost">
             <Stars rate={getApartment.rating} />
             <ApartmentHost
               hostTitle={getApartment.host.name}

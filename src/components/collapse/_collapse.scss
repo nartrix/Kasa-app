@@ -1,5 +1,12 @@
-.collapse {
-    margin: 20px;
+#collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-bottom: 33px;
+    }
 
     .collapse-content {
         display: flex;
@@ -9,13 +16,19 @@
         border-radius: 5px;
         height: 30px;
 
+        @media screen and (min-width: $breakpoint-desktop) {
+            height: 47px;
+        }
+
         h2 {
             color: $color-secondary;
             font-size: 13px;
-            font-family: $font-primary;
-            font-weight: 500;
-            line-height: 142.6%;
             margin-left: 11px;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                font-size: 24px;
+                margin-left: 18px;
+            }
         }
 
         .arrow {
@@ -23,6 +36,11 @@
             margin-right: 5px;
             transform: rotate(180deg);
             transition: 0.4s ease-in-out;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                width: 32px;
+                margin-right: 29px;
+            }
         }
         
         .rotated {
@@ -40,9 +58,13 @@
         p {
             color: $color-primary;
             font-size: 12px;
-            font-family: $font-primary;
-            line-height: 142.6%;
             margin: 11px;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                font-size: 24px;
+                margin: 18px;
+            }
+            
         }
     }
 

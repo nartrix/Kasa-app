@@ -1,0 +1,10 @@
+.about {
+
+    .about-collapse {
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            margin: 0 109px 0 109px;
+        }
+
+    }
+}

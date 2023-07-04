@@ -1,0 +1,64 @@
+.apartment {
+
+    .apartment-content {
+        @media screen and (min-width: $breakpoint-desktop) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .apartment-infos {
+            width: 100%;
+
+            .apartment-titleLocation {
+                margin-top: "15px";
+
+                h1 {
+                    font-size: 18px;
+                    color: $color-primary;
+                    
+                    @media screen and (min-width: $breakpoint-desktop) {
+                        font-size: 36px;
+                    }
+                }
+
+                h3 {
+                    font-size: 14px;
+                    color: $color-primary;
+
+                    @media screen and (min-width: $breakpoint-desktop) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .apartment-tags {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .apartment-infosHost {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-start;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    .apartment-description {
+        
+        @media screen and (min-width: $breakpoint-desktop) {
+            display: flex;
+            gap: 76px;
+            margin-top: 24px;
+        }
+    }
+}

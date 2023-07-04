@@ -8,12 +8,22 @@
         width: 63px;
         font-size: 12px;
         text-align: right;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            font-size: 18px;
+            width: 93px;
+        }
     }
 
     .host-picture {
         width: 32px;
         height: 32px;
         border-radius: 50%;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 64px;
+            height: 64px;
+        }
 
         img {
             object-fit: cover;

@@ -4,15 +4,17 @@ import aboutData from "../../datas/aboutdata.json";
 
 function About() {
   return (
-    <div className="A-propos">
+    <div className="about">
       <AboutBanner />
-      {aboutData.map((data, id) => (
-        <Collapse
-          key={id}
-          aboutTitle={data.aboutTitle}
-          aboutText={data.aboutText}
-        />
-      ))}
+      <div className="about-collapse">
+        {aboutData.map((data, id) => (
+          <Collapse
+            key={id}
+            aboutTitle={data.aboutTitle}
+            aboutText={data.aboutText}
+          />
+        ))}
+      </div>
     </div>
   );
 }
