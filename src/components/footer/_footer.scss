@@ -19,5 +19,9 @@ footer {
     p {
       color: $color-secondary;
       font-size: 12px;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 24px;
+      }
     }
   }

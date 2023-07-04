@@ -4,7 +4,7 @@ function Banner() {
       <div className="background-img">
         <div className="section-content">
           <h1 className="title">
-            Chez vous,
+            Chez vous,&nbsp;
             <br />
             partout et ailleurs
           </h1>
