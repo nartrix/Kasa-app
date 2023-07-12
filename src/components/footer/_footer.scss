@@ -1,0 +1,27 @@
+footer {
+    background-color: #000000;
+    height: 85px;
+    width: 100%;
+    text-align: center;
+    padding: 62px 0px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      width: 122px;
+      height: 40px;
+    }
+  
+    p {
+      color: $color-secondary;
+      font-size: 12px;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 24px;
+      }
+    }
+  }

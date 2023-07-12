@@ -1,0 +1,48 @@
+.section-background {
+    margin-top: 16px;
+    margin-bottom: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-top: 63px;
+        margin-bottom: 43px;
+    }
+        
+    .background-img {
+        background-image: url(../../asset/banner.png);
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+
+        .section-content {
+        display: flex;
+        align-items: center;
+        background-color: rgb(0, 0, 0, .3);
+        border-radius: 10px;
+        height: 111px;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            height: 223px;
+            justify-content: center;
+        }
+
+        .title {
+            color: $color-secondary;
+            font-size: 24px;
+            margin-left: 16px;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                font-size: 48px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+#collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-bottom: 33px;
+    }
+
+    .collapse-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff6060;
+        border-radius: 5px;
+        height: 30px;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            height: 47px;
+        }
+
+        h2 {
+            color: $color-secondary;
+            font-size: 13px;
+            margin-left: 11px;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                font-size: 24px;
+                margin-left: 18px;
+            }
+        }
+
+        .arrow {
+            width: 14px;
+            margin-right: 5px;
+            transform: rotate(180deg);
+            transition: 0.4s ease-in-out;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                width: 32px;
+                margin-right: 29px;
+            }
+        }
+        
+        .rotated {
+            transform: rotate(0deg);
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    .collapse-toggle {
+        display: flex;
+        align-items: center;
+        background: #F6F6F6;
+        
+
+        p {
+            color: $color-primary;
+            font-size: 12px;
+            margin: 11px;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                font-size: 24px;
+                margin: 18px;
+            }
+            
+        }
+    }
+
+    .equipment-list {
+        list-style-type: none;
+    }
+}
+
+
+
+
+
+
+

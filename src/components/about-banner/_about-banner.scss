@@ -1,0 +1,28 @@
+.section-background {
+    margin-top: 16px;
+    margin-bottom: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-top: 63px;
+        margin-bottom: 43px;
+    }
+        
+    .background-about {
+        background-image: url(../../asset/about-banner.png);
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        height: 223px;
+
+        .section-content {
+            background-color: rgb(0, 0, 0, .3);
+            border-radius: 10px;
+            height: 223px;
+        }
+    }
+}

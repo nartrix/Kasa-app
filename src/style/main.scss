@@ -1,0 +1,17 @@
+@import "./Utils/variables";
+
+@import "./Base/base";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/banner/banner";
+@import "../components/card/card";
+@import "../components/error-404/error-404";
+@import "../components/about-banner/about-banner";
+@import "../components/collapse/collapse";
+@import "../components/carrousel/carrousel";
+@import "../components/tag/tag";
+@import "../components/stars/stars";
+@import "../components/apartment-host/apartment-host";
+@import "../pages/apartment/apartment";
+@import "../pages/about/about";

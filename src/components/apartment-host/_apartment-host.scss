@@ -1,0 +1,34 @@
+.apartment-host {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .host-name {
+        color: $color-primary;
+        width: 63px;
+        font-size: 12px;
+        text-align: right;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            font-size: 18px;
+            width: 93px;
+        }
+    }
+
+    .host-picture {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 64px;
+            height: 64px;
+        }
+
+        img {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+}
