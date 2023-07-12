@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Carrousel from "../../components/carrousel";
 import Tag from "../../components/tag";
 import Collapse from "../../components/collapse/";
@@ -10,15 +10,22 @@ import ApartmentHost from "../../components/apartment-host";
 function Apartment() {
   const params = useParams();
   const [getApartment, setGetApartment] = useState();
+  const navigate = useNavigate();
+
+  const getData = async (paramsId) => {
+    const getData = await axios.get("/data.json");
+    const getKey = getData.data.find(({ id }) => id === paramsId);
+    getData.data.map(() => setGetApartment(getKey));
+    if (getKey === undefined) {
+      navigate("/404");
+    }
+  };
+
+  const id = params.id;
 
   useEffect(() => {
-    const getData = async () => {
-      const getData = await axios.get("/data.json");
-      const getKey = getData.data.find(({ id }) => id === params.id);
-      getData.data.map(() => setGetApartment(getKey));
-    };
-    getData();
-  }, [params.id]);
+    getData(id);
+  }, [id]);
 
   const getPictures = getApartment && getApartment.pictures;
   const tags = getApartment && getApartment.tags;
